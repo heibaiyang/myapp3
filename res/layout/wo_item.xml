@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="horizontal"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+    <ImageView android:layout_marginLeft="20dp"
+               android:id="@+id/img_contact" android:src="@drawable/ic_launcher"
+               android:layout_width="50dp" android:layout_height="50dp"/>
+    <LinearLayout
+            android:orientation="vertical" android:layout_marginLeft="20dp"
+            android:layout_width="match_parent" android:layout_height="50dp">
+        <TextView android:layout_weight="1"
+                  android:id="@+id/tv_name" android:text="联系人姓名" android:gravity="left"
+                  android:layout_width="match_parent" android:layout_height="50dp"/>
+        <TextView android:layout_weight="1"
+                  android:id="@+id/tv_phone" android:text="联系人电话" android:gravity="left"
+                  android:layout_width="match_parent" android:layout_height="50dp"/>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+    <!--<LinearLayout
+                  android:orientation="horizontal"
+                  android:layout_width="match_parent"
+                  android:layout_height="50dp">
+        <TextView android:layout_weight="1"
+                  android:id="@+id/tv_id" android:text="联系人id" android:gravity="center"
+                  android:layout_width="match_parent" android:layout_height="50dp"/>
+        <TextView android:layout_weight="1"
+                  android:id="@+id/tv_name" android:text="联系人姓名" android:gravity="center"
+                  android:layout_width="match_parent" android:layout_height="50dp"/>
+        <TextView android:layout_weight="1"
+                  android:id="@+id/tv_phone" android:text="联系人电话" android:gravity="center"
+                  android:layout_width="match_parent" android:layout_height="50dp"/>
+    </LinearLayout>-->
+    <FrameLayout android:layout_width="match_parent" android:layout_height="match_parent">
+        <ListView
+                android:id="@+id/lv_tongxunlu"
+                android:layout_width="match_parent" android:layout_height="match_parent"></ListView>
+        <com.example.myapp.myviews.SideIndex
+                android:id="@+id/sideIndex" android:layout_gravity="right"
+                android:layout_width="40dp" android:layout_height="fill_parent"/>
+    </FrameLayout>
+
+</LinearLayout>

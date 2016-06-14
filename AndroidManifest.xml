@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.example.myapp"
+          android:versionCode="1"
+          android:versionName="1.0">
+    <uses-sdk android:minSdkVersion="18"/>
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <permission android:name="com.my.order.receiver.permission" android:protectionLevel="normal"/>
+    <uses-permission android:name="com.my.order.receiver.permission"/>
+
+    <application android:label="@string/app_name" android:icon="@drawable/ic_launcher">
+        <activity android:name="MyActivity"
+                  android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".Main1Activity"></activity>
+        <activity android:name=".ThreadActivity"></activity>
+        <activity android:name=".LoadingActivity"></activity>
+        <activity android:name=".NetworkActivity"></activity>
+        <activity android:name=".activity.TestServiceActivity"></activity>
+        <activity android:name=".activity.OtherActivity"></activity>
+        <activity android:name=".activity.StaticActivity"></activity>
+        <activity android:name=".activity.OrderActivity"></activity>
+        <activity android:name=".activity.NotificationActivity"></activity>
+        <activity android:name=".activity.DownLoadActivity"></activity>
+        <activity android:name=".activity.RequestActivity"></activity>
+        <activity android:name=".activity.OkhttpActvity"></activity>
+        <activity android:name=".activity.LoginActivity"></activity>
+
+
+        <service android:name=".services.MyTestService" android:exported="false" />
+        <service android:name=".services.MyStaticService"/>
+        <service android:name=".services.MyOrderService"/>
+
+        <receiver android:name=".receiver.StaticReceiver1">
+            <intent-filter>
+                <action android:name="android.intent.action.MY_STATIC_ACTION"/>
+                <category android:name="ANDROID.INTENT.CATEGORY.DEFAULT"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".receiver.StaticReceiver2">
+            <intent-filter>
+                <action android:name="android.intent.action.MY_STATIC_ACTION"/>
+                <category android:name="ANDROID.INTENT.CATEGORY.DEFAULT"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".receiver.StaticReceiver3">
+            <intent-filter>
+                <action android:name="android.intent.action.MY_STATIC_ACTION"/>
+                <category android:name="ANDROID.INTENT.CATEGORY.DEFAULT"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".receiver.FirstReceiver">
+            <intent-filter android:priority="1000">
+                <action android:name="android.intent.action.MY_ORDER_ACTION"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".receiver.SecondReceiver">
+            <intent-filter android:priority="999">
+                <action android:name="android.intent.action.MY_ORDER_ACTION"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".receiver.ThirdReceiver">
+            <intent-filter android:priority="998">
+                <action android:name="android.intent.action.MY_ORDER_ACTION"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </receiver>
+    </application>
+</manifest>
